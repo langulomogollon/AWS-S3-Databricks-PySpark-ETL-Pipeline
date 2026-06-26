@@ -29,20 +29,6 @@ E --> F[Spark SQL]
 
 F --> G[Consultas Analíticas]
 
-## Tecnologías
-
-- AWS S3
-- Databricks
-- Apache Spark
-- PySpark
-- Spark SQL
-
-## Proceso
-
-### 1. Lectura desde S3
-
-```python
-spark.read.csv(...)
 ```
 
 ### 2. Limpieza
