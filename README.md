@@ -47,9 +47,13 @@ df.createOrReplaceTempView("tickets")
 ### 4. Consultas
 
 ```sql
-SELECT *
+%sql
+SELECT
+    `Tipo de ticket`,
+    COUNT(*) AS total_tickets
 FROM tickets
-WHERE `Tipo de ticket`='Incident';
+GROUP BY `Tipo de ticket`
+ORDER BY total_tickets DESC;
 ```
 
 ## Resultados
