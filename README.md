@@ -83,3 +83,8 @@ F --> G[Consultas Analíticas]
 
 G --> H[Dashboard / Power BI]
 ```
+## 👨‍💻 Author
+
+Leonardo Martín Angulo Mogollón
+
+Data Analyst | Business Intelligence | Databricks Certified
