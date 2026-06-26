@@ -6,15 +6,28 @@ Proyecto de ingeniería de datos donde se realiza la lectura de un archivo CSV a
 
 Posteriormente se realizan procesos de limpieza con PySpark y análisis mediante Spark SQL.
 
-## Arquitectura
+## Arquitectura del Proyecto
 
-S3
-↓
-Databricks
-↓
-PySpark
-↓
-Spark SQL
+```mermaid
+flowchart LR
+
+A[(Amazon S3<br/>Actualizaciones_Ticket.csv)]
+--> B[Databricks Cluster]
+
+B --> C[PySpark DataFrame]
+
+C --> D[Limpieza de datos
+- Header
+- Delimiter
+- InferSchema
+- Validaciones]
+
+D --> E[Vista Temporal
+tickets]
+
+E --> F[Spark SQL]
+
+F --> G[Consultas Analíticas]
 
 ## Tecnologías
 
